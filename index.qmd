@@ -22,6 +22,7 @@ Indonesia, yang merupakan negara agraris di Asia, dikenal karena produksi komodi
 Di antara berbagai produk pertanian, jagung menjadi salah satu komoditas utama setelah padi dan dianggap sebagai pengganti potensial untuk beras sebagai pangan pokok. Jagung memiliki nilai strategis dan ekonomis, berperan sebagai sumber utama karbohidrat dan protein, serta bahan baku industri. Menurut Kementerian Pertanian, jagung memiliki empat fungsi (4F): pangan, pakan, bahan bakar, dan bahan baku industri. Sekitar 60% jagung digunakan sebagai pakan ternak, khususnya unggas, sedangkan hanya sekitar 30% digunakan untuk konsumsi manusia, dan sisanya untuk keperluan industri dan benih. Sumatera Barat memiliki peran yang signifikan dalam sektor pertanian di Indonesia, termasuk produksi jagung sebagai salah satu komoditas utama. Jagung memiliki peranan penting dalam pemenuhan kebutuhan pangan dan kestabilan ekonomi daerah tersebut. Saat ini, perdagangan internasional semakin menjadi bagian integral dalam perekonomian global, termasuk ekspor dan impor jagung.
 
 Pada satu sisi, ekspor jagung dapat membuka peluang pasar baru bagi petani di Sumatera Barat, meningkatkan pendapatan, dan memberikan kontribusi positif terhadap perekonomian daerah. Namun, di sisi lain, impor jagung dapat berpotensi mempengaruhi produktivitas lokal dengan membawa persaingan yang lebih ketat. oleh karena itu Penelitian ini diharapkan dapat memberikan wawasan mendalam mengenai interaksi kompleks antara perdagangan jagung dengan produktivitas di tingkat lokal, membantu pemerintah daerah, petani, dan pelaku industri untuk mengembangkan strategi yang berkelanjutan dan mengoptimalkan manfaat ekspor dan impor jagung bagi Sumatera Barat. Dengan demikian, latar belakang ini menjadi penting untuk merinci kerangka penelitian yang akan dilakukan dan memotivasi penelitian lebih lanjut dalam konteks hubungan antara ekspor, impor, dan produktivitas jagung di daerah ini.
+
 ### Ruang Lingkup
 
 Dalam penelitian ini, peneliti memfokuskan penelitiannya pada data dari Trade Map dan Badan Pusat Statistik. Penelitian ini mencakup tiga variabel utama, yaitu nilai ekspor jagung Indonesia, nilai impor jagung Indonesia, dan nilai produktivitas jagung di Sumatera Barat. Data yang digunakan dalam penelitian ini bersifat time series, meliputi periode 2013-2022. Data ini menjadi fokus utama penelitian untuk menggali informasi dan insight terkait dengan tren dan pola yang terkait dengan ekspor jagung, impor jagung, dan produktivitas jagung di wilayah Sumatra Barat selama periode tersebut.
@@ -66,7 +67,6 @@ Jagung (Zea mays L.) adalah salah satu tanaman pangan yang memiliki signifikansi
 ### Data
 
 | Tahun |   Nilai Ekspor  |   Nilai Ekspor  | Produktivitas  |
-|       |    US Dollar    |    US Dollar    | Kwintal/Hektar |
 |-------|-----------------|-----------------|----------------|
 | 2013  |   10.643.000    |   918.890.000   |      67,03     |
 | 2014  |   13.264.000    |   810.417.000   |      65,02     |
@@ -87,11 +87,12 @@ $$
 y_{t}=\beta_0 + \beta_1 x_1+\beta_2 x_2+\mu_t
 $$
 Keterangan :
-Y = Pertumbuhan Ekonomi
 
-$$x_1$$= Total Ekspor
+$$y_t$$ = Produktivitas
 
-$$x_2$$= Total Impor
+$$x_1$$= Nilai Ekspor
+
+$$x_2$$= Nilai Impor
 
 $$u_t$$ = Error
 
@@ -101,12 +102,14 @@ $$u_t$$ = Error
 
 Pada bagian ini dapat ditampilkan data yang telah dikumpulkan :
 ```{r}
-setwd('C:/Metopel/UAS - Fawwazky Raja Putra Kiswandi')
-read_excel("latihan1.xlsx")
+setwd('C:/Dokumen/metopel/Hafizd Razaan Zaidan 220204128')
+read_excel("data1.xlsx")
 ```
 Diketahui :
-X = Nilai Ekspor Kelapa Sawit
-Y = PDRB Kota Riau
+
+X = Nilai Ekspor Jagung
+Y = Nilai Ekspor Jagung
+S = Produktivitas Jagung
 
 ```{r}
 library("readxl")
